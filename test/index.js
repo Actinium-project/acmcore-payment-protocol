@@ -4,7 +4,7 @@ var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
 var expect = chai.expect;
-var bitcore = require('bitcore-lib');
+var bitcore = require('acmcore-lib');
 var PrivateKey = bitcore.PrivateKey;
 var PublicKey = bitcore.PublicKey;
 var KJUR = require('jsrsasign');
@@ -233,7 +233,7 @@ describe('PaymentProtocol', function() {
       var valid = ack.isValidSize();
       valid.should.equal(true);
       var contentType = ack.getContentType();
-      contentType.should.equal(PaymentProtocol.LEGACY_PAYMENT['BTC'].ACK_CONTENT_TYPE);
+      contentType.should.equal(PaymentProtocol.LEGACY_PAYMENT['ACM'].ACK_CONTENT_TYPE);
       var serialized = ack.serialize();
       serialized.length.should.be.greaterThan(0);
       var ack2 = new PaymentProtocol().makePaymentACK();
@@ -299,7 +299,7 @@ describe('PaymentProtocol', function() {
       var paypro = new PaymentProtocol();
       paypro.makePayment();
       paypro.set('memo', 'test memo');
-      paypro.getContentType().should.equal('application/bitcoin-payment');
+      paypro.getContentType().should.equal('application/actinium-payment');
     });
 
   });
@@ -364,7 +364,7 @@ describe('PaymentProtocol', function() {
       var buf = paypro.serializeForSig();
       var valid = paypro.isValidSize();
       var contentType = paypro.getContentType();
-      contentType.should.equal(PaymentProtocol.LEGACY_PAYMENT['BTC'].REQUEST_CONTENT_TYPE);
+      contentType.should.equal(PaymentProtocol.LEGACY_PAYMENT['ACM'].REQUEST_CONTENT_TYPE);
       valid.should.equal(true);
       buf.length.should.be.greaterThan(0);
     });

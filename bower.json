@@ -1,19 +1,19 @@
 {
-  "name": "bitcore-payment-protocol",
+  "name": "acmcore-payment-protocol",
   "main": "./bitcore-payment-protocol.min.js",
   "version": "1.1.1",
-  "homepage": "https://github.com/bitpay/bitcore-payment-protocol",
+  "homepage": "https://github.com/Actinium-project/acmcore-payment-protocol",
   "authors": [
     "BitPay, Inc."
   ],
-  "description": "BIP70 Payment Protocol support for bitcore",
+  "description": "BIP70 Payment Protocol support for acmcore",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "bitcoin",
+    "actinium",
     "bitcore",
-    "btc",
+    "acm",
     "satoshi"
   ],
   "license": "MIT",

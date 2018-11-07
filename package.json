@@ -1,8 +1,8 @@
 {
   "name": "acmcore-payment-protocol",
-  "version": "1.7.0",
-  "description": "Payment Protocol (BIP70 and related) support for acmcore",
-  "author": "BitPay <dev@bitpay.com>",
+  "version": "1.0.0",
+  "description": "Payment Protocol (BIP70 and related) support for AcmCore",
+  "author": "Harris Brakmic",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint",
@@ -12,6 +12,10 @@
     "rootcerts": "node ./update-rootcerts.js"
   },
   "contributors": [
+    {
+      "name": "Harris Brakmic",
+      "email": "brakmic@gmail.com"
+    },
     {
       "name": "Christopher Jeffrey",
       "email": "chjeffrey@gmail.com"
